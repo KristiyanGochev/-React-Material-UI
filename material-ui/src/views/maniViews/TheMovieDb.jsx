@@ -9,6 +9,7 @@ class TheMovieDb extends React.Component{
         return(
             <div>TheMovieDb</div>
         );
+        
     }
 }
 export default TheMovieDb;

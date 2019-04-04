@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import {Switch, Route } from 'react-router-dom'
-import Home from './Home';
-import About from './About';
-import TheMovieDb from './TheMovieDb';
-import OnlineShop from './OnlineShop';
+import {Switch, Route, Redirect } from 'react-router-dom'
+import Home from '../maniViews/Home';
+import About from '../maniViews/About';
+import TheMovieDb from '../maniViews/TheMovieDb';
+import OnlineShop from '../maniViews/OnlineShop';
 
 
 class Main extends React.Component{
@@ -13,16 +13,17 @@ class Main extends React.Component{
     }
     render(){
         return(
-            <main>
+  
                 <BrowserRouter>  
                 <Switch>
-                    <Route component={Home}/>
+                    <Route path='/home'component={Home}/>
                     <Route path='/about' component={About}/>
                     <Route path='/theMovieDb' component={TheMovieDb}/>
                     <Route path='/onlineShop' component={OnlineShop}/>
+                    <Redirect from="/" to="/home" />
                 </Switch>
                 </BrowserRouter>
-          </main>
+
         );
     }
 }
