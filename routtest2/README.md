@@ -1,3 +1,12 @@
+###
+Source: https://www.youtube.com/watch?v=rIoflwHFd6o&list=PLcCp4mjO-z9_4Wak3Uq8dEWC6H1fbSNgL
+
+1. Install Touch : `npm install touch-cli -g`
+2. Install Router: `npm install --save react-router-dom`
+3. Install Yarn: `npm install yarn -g`
+4. Add json-server: `yarn add --dev json-server`
+###
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
