@@ -32,9 +32,9 @@
   
   #### PUT :
   The command bellow will send put/update requist to the server which 
-   * content-type: application/json
-   * method: PUT 
-   * DataSet:{"name":"myName"}
+   * -H content-type: application/json
+   * -X method: PUT 
+   * -d DataSet:{"name":"myName"}
    * ip:port/writers{id}: the id stays for the indetificator for which item we want to update
    
   `curl -H "Content-Type: application/json" -X POST -d {"name":"My new Name",} localhost:4000/writers/{id}`
