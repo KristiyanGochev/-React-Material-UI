@@ -26,6 +26,7 @@
    * -X method: POST
    * -d {"name":"myName","id":"123"}
    * ip:port/writers
+   
    `curl -H "Content-Type: application/json" -X POST -d {"name":"Allan Watts","id":"allan-watts"} localhost:4000/writers`
   
   #### PUT :
