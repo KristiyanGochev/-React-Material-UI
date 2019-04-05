@@ -1,0 +1,33 @@
+{
+    "writers":[
+        {
+            "id":"ross-macdonald",
+            "name":"Ross Macdonald",
+            "born":"December 13 1915",
+            "description":"Ross Macdonald is the main pseudonym that was used by the American-Canadian writer of crime fiction Kenneth Millar (/ˈmɪlər/; December 13, 1915 – July 11, 1983). He is best known for his series of hardboiled novels set in Southern California and featuring private detective Lew Archer.",
+            "deceased":"July 11 1983",
+            "image":"https://upload.wikimedia.org/wikipedia/en/b/ba/Ross_macdonald.jpg"
+        },{
+            "id":"henning-mankell",
+            "name":"Henning Mankell",
+            "born":"February 3 1948",
+            "description":"Henning Georg Mankell (Swedish pronunciation: [²hɛnːɪŋ ˈmaŋːkɛl]; 3 February 1948 – 5 October 2015) was a Swedish crime writer, children's author, and dramatist, best known for a series of mystery novels starring his most noted creation, Inspector Kurt Wallander. He also wrote a number of plays and screenplays for television.",
+            "deceased":"October 5 2015",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Henning_Mankell_3_2011_Shankbone.jpg/479px-Henning_Mankell_3_2011_Shankbone.jpg"
+        },{
+            "id":"eric-ambler",
+            "name":"Eric Ambler",
+            "born":"June 28 1909",
+            "description":"Eric Clifford Ambler OBE (28 June 1909 – 22 October 1998) was an influential English author of thrillers, in particular spy novels, who introduced a new realism to the genre. He also worked as a screenwriter. Ambler used the pseudonym Eliot Reed for books co-written with Charles Rodda.",
+            "deceased":"October 22 1998",
+            "image":"https://upload.wikimedia.org/wikipedia/en/d/db/Eric_Ambler.jpg"
+        },{
+            "id":"steve-allen",
+            "name":"Steve Allen",
+            "born":"December 26, 1921",
+            "description":"Stephen Valentine Patrick William 'Steve' Allen (December 26, 1921 – October 30, 2000) was an American television personality, radio personality, musician, composer, actor, comedian, writer, and advocate of scientific skepticism. In 1954, he achieved national fame as the co-creator and first host of The Tonight Show, which was the first late night television talk show.",
+            "deceased":"October 30 2000",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Steve_Allen_-_press_photo.JPG/471px-Steve_Allen_-_press_photo.JPG"
+        }
+    ]
+}
