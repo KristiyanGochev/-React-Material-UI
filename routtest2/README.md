@@ -17,6 +17,11 @@
   - `curl localhost:4000/writers/` : will return a list of all writers
   - `curl localhost:4000/writers/{id}` : will return an single item with a specified id  
 #### Post:
+  The command bellow will send post requist to the server which 
+   * content-type: application/json
+   * method: POST
+   * DataSet:{<fillMe:WithData>}
+   
   - `curl -H "Content-Type: application/json" -X POST -d {"name":"Allan Watts","id":"allan-watts"} localhost:4000/writers`
 ###
 
