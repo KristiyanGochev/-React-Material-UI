@@ -16,16 +16,26 @@
 
 
 ##### 7. As the Json-server is running on background we are allowed to use it, so lets do some test:
-#### Get:
+#### GET :
   - `curl localhost:4000/writers/` : will return a list of all writers
   - `curl localhost:4000/writers/{id}` : will return an single item with a specified id  
-#### Post:
+  
+#### POST :
   The command bellow will send post requist to the server which 
-   * content-type: application/json
-   * method: POST
-   * DataSet:{<fillMe:WithData>}
-   
+   * -H content-type: application/json
+   * -X method: POST
+   * -d {"name":"myName","id":"123"}
+   * ip:port/writers
   - `curl -H "Content-Type: application/json" -X POST -d {"name":"Allan Watts","id":"allan-watts"} localhost:4000/writers`
+  
+  #### PUT :
+  The command bellow will send put/update requist to the server which 
+   * content-type: application/json
+   * method: PUT 
+   * DataSet:{"name":"myName"}
+   * ip:port/writers{id}: the id stays for the indetificator for which item we want to update
+   
+  - `curl -H "Content-Type: application/json" -X POST -d {"name":"My new Name",} localhost:4000/writers/{id}`
 ###
 
 ## Available Scripts
