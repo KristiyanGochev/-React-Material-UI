@@ -51,11 +51,6 @@
   `npm start : will run the ReactJs server`
   
   `npm run jsonServer : will run the json-server on port 4000`
-  
-  package.json :
-  
-    "jsonServer":"json-server --watch store.json --port 4000",
-    "start": "react-scripts start ",
 ###
 
 ## Available Scripts
