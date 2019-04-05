@@ -18,6 +18,7 @@
 ##### 7. As the Json-server is running on background we are allowed to use it, so lets do some test:
 #### GET :
    `curl localhost:4000/writers/` : will return a list of all writers
+   
    `curl localhost:4000/writers/{id}` : will return an single item with a specified id  
   
 #### POST :
