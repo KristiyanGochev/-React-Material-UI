@@ -7,7 +7,7 @@
 ### Installation : 
 
 ##### 1. Install ReactApp : `nom install create-react-app <YourAppName>`
-  - Delete useless files :
+  - Clean up the structure, delete the files below, because we're not gonna use them:
     * App.css
     * App.test.js
     * index.css
