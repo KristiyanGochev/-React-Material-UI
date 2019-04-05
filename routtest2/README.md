@@ -17,7 +17,7 @@
   - `curl localhost:4000/writers/` : will return a list of all writers
   - `curl localhost:4000/writers/{id}` : will return an single item with a specified id  
 #### Post:
-  - `curl -H "Content-Type: application/json" -X POST -d {"name":"Allan Watts","id":"allan-watts"}`  
+  - `curl -H "Content-Type: application/json" -X POST -d {"name":"Allan Watts","id":"allan-watts"} localhost:4000/writers`
 ###
 
 ## Available Scripts
