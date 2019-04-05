@@ -14,15 +14,15 @@ class Main extends React.Component{
     render(){
         return(
   
-                <BrowserRouter>  
-                <Switch>
-                    <Route path='/home'component={Home}/>
-                    <Route path='/about' component={About}/>
-                    <Route path='/theMovieDb' component={TheMovieDb}/>
-                    <Route path='/onlineShop' component={OnlineShop}/>
-                    <Redirect from="/" to="/home" />
-                </Switch>
-                </BrowserRouter>
+            <BrowserRouter>  
+            <Switch>
+                <Route path='/home'component={Home}/>
+                <Route path='/about' component={About}/>
+                <Route path='/theMovieDb' component={TheMovieDb}/>
+                <Route path='/onlineShop' component={OnlineShop}/>
+                <Redirect from="/" to="/home" />
+            </Switch>
+            </BrowserRouter>
 
         );
     }
