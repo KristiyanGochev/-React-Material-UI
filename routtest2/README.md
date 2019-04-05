@@ -22,7 +22,7 @@
    `curl localhost:4000/writers/{id}` : will return an single item with a specified id  
   
 #### POST :
-  The command bellow will send post requist to the server which 
+  The command bellow will send post requist to the server: 
    * -H content-type: application/json
    * -X method: POST
    * -d {"name":"myName","id":"123"}
@@ -31,13 +31,20 @@
    `curl -H "Content-Type: application/json" -X POST -d {"name":"Allan Watts","id":"allan-watts"} localhost:4000/writers`
   
   #### PUT :
-  The command bellow will send put/update requist to the server which 
+  The command bellow will send put/update requist to the server: 
    * -H content-type: application/json
    * -X method: PUT 
    * -d DataSet:{"name":"myName"}
    * ip:port/writers{id}: the id stays for the indetificator for which item we want to update
    
   `curl -H "Content-Type: application/json" -X POST -d {"name":"My new Name",} localhost:4000/writers/{id}`
+  
+  #### DELETE :
+  The command bellow will send delete requist to the server:
+   * -X method: Delete 
+   * ip:port/writers{id}: the id stays for the indetificator for which item we want to delete
+   
+  `curl -X DELETE localhost:4000/writers/{id}`
 ###
 
 ## Available Scripts
