@@ -9,7 +9,7 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "jsonServer":"json-server --watch store.json --port 4000",
+    "jsonServer": "json-server --watch store.json --port 4000",
     "start": "react-scripts start ",
     "build": "react-scripts build",
     "test": "react-scripts test",

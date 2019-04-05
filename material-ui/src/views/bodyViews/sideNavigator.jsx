@@ -19,7 +19,9 @@ import TimerIcon from '@material-ui/icons/Timer';
 import SettingsIcon from '@material-ui/icons/Settings';
 import PhonelinkSetupIcon from '@material-ui/icons/PhonelinkSetup';
 import Content from  './Content';
-import {Link} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+import  router  from 'react-router'
+import { Router } from 'react-router-dom';
 
 const categories = [
   {
@@ -90,10 +92,10 @@ const styles = theme => ({
 
 function Navigator(props) {
   const { classes, ...other } = props;
-function onSelectionChange(props,){
+  
+function onSelectionChange(props){
     console.log(props.currentTarget.id)
-    var a = {Content};    
-    debugger;
+    var a = Content;
 
 }
   return (
