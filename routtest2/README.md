@@ -8,7 +8,7 @@ Source: https://www.youtube.com/watch?v=rIoflwHFd6o&list=PLcCp4mjO-z9_4Wak3Uq8dE
 5. Create JSON file:`store.json` and include some data in it
 6. Run the json-server by using the following command : `.\node_modules\.bin\json-server --watch store.json --port 4000`
 
-###Note: if you use just json-server --watch store.json the json server will not be recognized
+  ### Note: if you just run `json-server --watch store.json` the json server will not be recognized
 
 
 7. As the Json-server is running on background we are allowed to use it, so lets do some test:
