@@ -96,3 +96,5 @@ render(){
   
   `npm run jsonServer : will run the json-server on port 4000`
 ###
+
+   ######  Note: React DevTools for Chrome: https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html#installation
