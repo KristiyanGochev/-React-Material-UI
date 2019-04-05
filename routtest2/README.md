@@ -14,17 +14,52 @@
     * logo.svg
     * registerServiceWorker.js
     
+   - Clean up the App.js file and past the code : 
+   
+  ``` 
+import React, { Component } from 'react'
+
+export default class extends Component{
+  state ={
+    writers:[]
+  }
+render(){
+  return<div>
+     123</div>
+  
+}
+}
+```    
 ##### 2. Install Touch : `npm install touch-cli -g`
 ##### 3. Install Router: `npm install --save react-router-dom`
 ##### 4. Install Yarn: `npm install yarn -g`
 ##### 5. Add json-server: `yarn add --dev json-server`
 ##### 6. Create JSON file:`store.json` and include some data in it
-##### 7. Run the json-server by using the following command : `.\node_modules\.bin\json-server --watch store.json --port 4000`
+##### 7.Change the App.js file as follow:
+```
+import React, { Component } from 'react';
+export default class extends Component{
+  state ={
+    writers:[]
+  }
+  componentDidMount(){
+    fetch('http://localhost:4000/writers')
+    .then(res => res.json())
+    .then(writers =>this.setState({writers}))
+  }
+render(){
+  return<div>
+     123</div>
+  
+}
+}
+```
+##### 8. Run the json-server by using the following command : `.\node_modules\.bin\json-server --watch store.json --port 4000`
 
   ###### Note: if you just run `json-server --watch store.json` the json server will not be recognized
 
 
-##### 7. As the Json-server is running on background we are allowed to use it, so lets do some test:
+##### 9. As the Json-server is running on background we are allowed to use it, so lets do some test:
 #### GET :
    `curl localhost:4000/writers/` : will return a list of all writers
    
