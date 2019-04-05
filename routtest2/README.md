@@ -2,17 +2,17 @@
 
   Source: https://www.youtube.com/watch?v=rIoflwHFd6o&list=PLcCp4mjO-z9_4Wak3Uq8dEWC6H1fbSNgL
 
-#### 1. Install Touch : `npm install touch-cli -g`
-#### 2. Install Router: `npm install --save react-router-dom`
-#### 3. Install Yarn: `npm install yarn -g`
+##### 1. Install Touch : `npm install touch-cli -g`
+##### 2. Install Router: `npm install --save react-router-dom`
+##### 3. Install Yarn: `npm install yarn -g`
 #### 4. Add json-server: `yarn add --dev json-server`
-#### 5. Create JSON file:`store.json` and include some data in it
-#### 6. Run the json-server by using the following command : `.\node_modules\.bin\json-server --watch store.json --port 4000`
+##### 5. Create JSON file:`store.json` and include some data in it
+##### 6. Run the json-server by using the following command : `.\node_modules\.bin\json-server --watch store.json --port 4000`
 
   ###### Note: if you just run `json-server --watch store.json` the json server will not be recognized
 
 
-#### 7. As the Json-server is running on background we are allowed to use it, so lets do some test:
+##### 7. As the Json-server is running on background we are allowed to use it, so lets do some test:
 #### Get:
   - `curl localhost:4000/writers/` : will return a list of all writers
   - `curl localhost:4000/writers/{id}` : will return an single item with a specified id  
