@@ -5,12 +5,21 @@
    * React Router : https://github.com/ReactTraining/react-router
    * Json-Server  : https://github.com/typicode/json-server
 ### Installation : 
-##### 1. Install Touch : `npm install touch-cli -g`
-##### 2. Install Router: `npm install --save react-router-dom`
-##### 3. Install Yarn: `npm install yarn -g`
-##### 4. Add json-server: `yarn add --dev json-server`
-##### 5. Create JSON file:`store.json` and include some data in it
-##### 6. Run the json-server by using the following command : `.\node_modules\.bin\json-server --watch store.json --port 4000`
+
+##### 1. Install ReactApp : `nom install create-react-app <YourAppName>`
+  - Delete useless files :
+    * App.css
+    * App.test.js
+    * index.css
+    * logo.svg
+    * registerServiceWorker.js
+    
+##### 2. Install Touch : `npm install touch-cli -g`
+##### 3. Install Router: `npm install --save react-router-dom`
+##### 4. Install Yarn: `npm install yarn -g`
+##### 5. Add json-server: `yarn add --dev json-server`
+##### 6. Create JSON file:`store.json` and include some data in it
+##### 7. Run the json-server by using the following command : `.\node_modules\.bin\json-server --watch store.json --port 4000`
 
   ###### Note: if you just run `json-server --watch store.json` the json server will not be recognized
 
