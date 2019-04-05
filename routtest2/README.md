@@ -45,6 +45,15 @@
    * ip:port/writers{id}: the id stays for the indetificator for which item we want to delete
    
   `curl -X DELETE localhost:4000/writers/{id}`
+  
+  In order to start the ReactJs server and Json-Server use the below commands:
+  
+  `npm start : will run the ReactJs server`
+  
+  `npm run jsonServer : will run the json-server on port 4000`
+  
+    "jsonServer":"json-server --watch store.json --port 4000",
+    "start": "react-scripts start ",
 ###
 
 ## Available Scripts
