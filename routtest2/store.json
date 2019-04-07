@@ -29,5 +29,80 @@
             "deceased":"October 30 2000",
             "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Steve_Allen_-_press_photo.JPG/471px-Steve_Allen_-_press_photo.JPG"
         }
+    ],
+    "texts":[
+        {
+            "id":"nature",
+            "writerId":"ross-macdonald",
+            "title":"Nature",
+            "description": "Description about the Nature",
+            "published": 1758
+        },{ 
+            "id":"thus-spoke-zarathustra",
+            "writerId":"henning-mankell",
+            "title":"Thus Spoke Zarathustra",
+            "description":"Description about the Spoke",
+            "published": 2001
+        },{
+            "id":"beyond-good-and-evil",
+            "writerId":"eric-ambler",
+            "title":"Beyond Good and Evil",
+            "description":"Description about the GOOD AND evil",
+            "published": 1478
+        },{
+            "id":"self-reliance",
+            "writerId":"steve-allen",
+            "title":"Selfe Reliance",
+            "description":"Description about the SelfeReliance", 
+            "published": 1955
+        },{
+            "id":"kill-a-women",
+            "writerId":"ross-macdonald",
+            "title":"Kill a women",
+            "description": "Description about a women killing",
+            "published": 2000
+        },{
+            "id":"nature-2",
+            "writerId":"steve-allen",
+            "title":"Nature2",
+            "description": "Description about the Nature-2",
+            "published": 1898
+        },{
+            "id":"nature",
+            "writerId":"steve-allen",
+            "title":"Nature",
+            "description": "Description about the Nature",
+            "published": 1998
+        },{
+            "id":"more-for-me",
+            "writerId":"steve-allen",
+            "title":"More for me",
+            "description": "Description about the More for me",
+            "published": 1958
+        },{
+            "id":"neptune",
+            "writerId":"ross-macdonald",
+            "title":"Naptune",
+            "description": "Description about the Neptune",
+            "published": 1976
+        },{
+            "id":"nature",
+            "writerId":"ross-macdonald",
+            "title":"Nature",
+            "description": "Description about the Nature",
+            "published": 1999
+        },{
+            "id":"spring",
+            "writerId":"henning-mankell",
+            "title":"Spring",
+            "description": "Description about the Spring",
+            "published": 1888
+        },{
+            "id":"tune",
+            "writerId":"henning-mankell",
+            "title":"Tune",
+            "description": "Description about the Tune",
+            "published": 1987
+        }
     ]
 }
