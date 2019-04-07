@@ -14,7 +14,7 @@ export default({ match:{url},writers})  =>
     </ul>
     <Route exact path={url} render ={()=><h3>Please select a writer from above.</h3>}/>
     <Route path={`${url}/:writerId`} render={
-        ({props}) =>{
+        props =>{
             const writer = writers.find(writer => writer.id === props.match.params.writerId);
             if(!writer){
                 return <NotFound/>
