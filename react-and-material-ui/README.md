@@ -1,8 +1,10 @@
-## Material-UI 
+## Sources: 
 
-URL : https://material-ui.com/
-////////
-### `npm start`
+Material-UI : https://material-ui.com/
+YouTube Turorial : https://www.youtube.com/watch?v=xm4LX5fJKZ8&t=828s
+
+Хуйо, провери кво става с functional component && class base controller
+### 
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
