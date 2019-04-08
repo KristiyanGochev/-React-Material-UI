@@ -30,7 +30,7 @@
             "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Steve_Allen_-_press_photo.JPG/471px-Steve_Allen_-_press_photo.JPG"
         }
     ],
-    "texts":[
+    "texts": [
         {
             "id":"nature",
             "writerId":"ross-macdonald",
@@ -77,7 +77,7 @@
             "id":"more-for-me",
             "writerId":"steve-allen",
             "title":"More for me",
-            "description": "Description about the More for me",
+            "description": "",
             "published": 1958
         },{
             "id":"neptune",

@@ -3,7 +3,7 @@ import {Link, Route} from 'react-router-dom'
 import Writer from "./Writer";
 import {NotFound} from "../Errors"
 
-export default({ match:{url},writers})  =>
+export default({ match:{url}, writers})  =>
 <Fragment>
     <ul>
     {writers.map(({id, name}) =>
@@ -12,10 +12,13 @@ export default({ match:{url},writers})  =>
         </li>
         )}
     </ul>
-    <Route exact path={url} render ={()=><h3>Please select a writer from above.</h3>}/>
+    <Route exact path={url} render ={
+        () => <h3>Please select a writer from above.</h3>
+    }/>
+
     <Route path={`${url}/:writerId`} render={
         props =>{
-            const writer = writers.find(writer => writer.id === props.match.params.writerId);
+            const writer = writers.find(({id}) => id === props.match.params.writerId);
             if(!writer){
                 return <NotFound/>
             }
