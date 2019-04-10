@@ -3,7 +3,9 @@
 Material-UI : https://material-ui.com/
 YouTube Turorial : https://www.youtube.com/watch?v=xm4LX5fJKZ8&t=828s
 
-Хуйо, провери кво става с functional component && class base controller
+Useful literature : 
+- Array.reduce() : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+- Object.entries(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
 ### 
 
 Runs the app in the development mode.<br>

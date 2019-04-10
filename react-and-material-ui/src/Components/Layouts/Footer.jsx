@@ -1,8 +1,7 @@
 import React from 'react'
 import {Paper, Tab, Tabs} from '@material-ui/core'
-export default props =>
 
-<div>
+export default props =>
 <Paper>
         <Tabs
           value ={0}
@@ -10,9 +9,11 @@ export default props =>
           textColor="primary"
           centered
         >
-          <Tab label="Item One" />
-          <Tab label="Item Two" />
-          <Tab label="Item Three" />
+        <Tab label='All'/>
+        {props.muscles.map(muscle =>
+        <Tab
+            key = {muscle + 1}
+            label={muscle} />
+        )}
         </Tabs>
       </Paper>
-</div>;
