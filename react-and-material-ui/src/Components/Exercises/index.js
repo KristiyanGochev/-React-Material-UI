@@ -12,7 +12,9 @@ const style = {
         padding: 20,
         marginTop:10,
         marginBottom:10,
-        marginRight:10
+        marginRight:10,
+        height:500,
+        overflowY:'auto'
     },
     PaperRight:{
         padding: 20,
@@ -21,33 +23,53 @@ const style = {
     }
 }
 
-export default ({exercises}) =>
+export default ({
+    exercises,
+    category,
+    onSelect,
+    exercise:{
+        id,
+        title = 'Welcome',
+        description = 'Please select an exercises from the list on the left!',
+        }}) =>
 <Grid container>
     <Grid item sm>
         <Paper style={style.PaperLeft} >
           {exercises.map(([ group ,exercises])=>
-            <Fragment>
-                <Typography 
-                    key={group + 1} 
-                    variant="headline"
-                    style={{textTransform:'capitalize'}}>
-                    {group}
-                </Typography>
-                <List component="ul">
-                {exercises.map(({title}) =>
-                <ListItem button>
-                    <ListItemText primary={title}/>
-                </ListItem>
-                )}
-                </List>
+            !category || category === group 
+                ?<Fragment key = {group}>
+                    <Typography 
+                        key={group + 1} 
+                        variant="headline"
+                        style={{textTransform:'capitalize'}}>
+                        {group}
+                    </Typography>
+                    <List component="ul">
+                    {exercises.map(({id,title}) =>
+                        <ListItem
+                        button
+                        key ={id}
+                        onClick={()=>onSelect(id)}>
+                            <ListItemText primary={title}                            
+                            />
+                        </ListItem>
+                        )}
+                    </List>
             </Fragment>
-          )}
+            : null
+        )}
         </Paper>
     </Grid>
     
     <Grid item sm>
         <Paper style={style.PaperRight}>
-        Rigth panel
+            <Typography variant="display1">
+             {title}
+            </Typography>
+            <Typography variant="subheading"
+            style={{marginTop:20}}>
+               {description}
+            </Typography>
         </Paper>
     </Grid>
 

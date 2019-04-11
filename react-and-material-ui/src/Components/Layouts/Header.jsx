@@ -1,13 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types';
-import MenuIcon from '@material-ui/icons/Menu';
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
+import CreateDialog from '../Exercises/Dialogs/Create'
 
-export default props =>
+export default ({muscles}) =>
 <AppBar position="static">
   <Toolbar>
-    <Typography variant='headline' color='inherit'>
+    <Typography variant='headline' color='inherit' style={{flex:1}}>
       Exercise DataBase
     </Typography>  
+    <CreateDialog muscles= {muscles}/>
   </Toolbar>
 </AppBar>
