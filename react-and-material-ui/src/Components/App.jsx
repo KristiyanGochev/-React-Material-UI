@@ -20,32 +20,39 @@ getExercisesByMusles(){
     },{})
     )
 }
-handleCategorySelected = category =>{
+handleCategorySelect = category =>{
 this.setState({
     category : category
 })
 
 }
-handleExerciseSelected = id =>{
+handleExerciseSelect = id =>{
     this.setState((exercise)=>({
         exercise: exercises.find(ex =>ex.id === id)
     }))
 }
+handleExerciseCreate = exercises =>{
+    this.setState(({exercise}) =>({
+        exercises:[
+            ...exercises, exercise
+            ]
+    })
+    )}
 
     render(){
        const exercises = this.getExercisesByMusles(),
        { category, exercise} = this.state
         return <Fragment>
-            <Header muscles= {muscles} />
+            <Header muscles= {muscles} onExerciseCreate = {this.handleExerciseCreate} />
             <Exercises
             exercise = {exercise}
             category={category}
-            onSelect={this.handleExerciseSelected}
+            onSelect={this.handleExerciseSelect}
             exercises={exercises}/>
             <Footer
             category = {category}
             muscles = {muscles}
-            onSelect ={this.handleCategorySelected}/>
+            onSelect ={this.handleCategorySelect}/>
         </Fragment>
     }
 }

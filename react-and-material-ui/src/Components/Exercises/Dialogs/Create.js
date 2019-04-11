@@ -35,6 +35,11 @@ export default withStyles(styles) (class extends Component {
             open:!this.state.open
         }) 
     }
+    handleSubmit = () =>{
+        //TODO validate
+        const {exercise} = this.state
+        this.props.onCreate(exercise);
+    }
     handleChange = name => ({target:{value}})=>{
         debugger;
         this.setState({
@@ -45,8 +50,9 @@ export default withStyles(styles) (class extends Component {
         })
     }
     render(){
-        const {open, exercise:{ title, description}} = this.state
-        const {classes, muscles: categories } = this.props;
+        debugger;
+        const {open, exercise }= this.state,
+              {classes, muscles: categories } = this.props;
         return <Fragment>
             <Button variant="fab" mini onClick={this.handleTogggle}>
                 <AddIcon />
@@ -65,7 +71,7 @@ export default withStyles(styles) (class extends Component {
                     <form>
                         <TextField
                             label="Title"       
-                            value={title}
+                            value={exercise.title}
                             onChange={this.handleChange('title')}
                             margin="normal"
                             className={classes.FormControl}
@@ -76,11 +82,11 @@ export default withStyles(styles) (class extends Component {
                             Muscles
                             </InputLabel>
                                 <Select
-                                    value={categories}
-                                    onChange={this.handleChange(categories)}
+                                    value={exercise.muscles}
+                                    onChange={this.handleChange('muscles')}
                                 >
                                 {categories.map(category =>
-                                <MenuItem value={category}>{category}</MenuItem>
+                                <MenuItem value={category} key={category}>{category}</MenuItem>
                                     )}
                             </Select>
                         </FormControl>
@@ -89,7 +95,7 @@ export default withStyles(styles) (class extends Component {
                             label="Description"    
                             multiline
                             rowsMax="4"
-                            value={description}
+                            value={exercise.description}
                             onChange={this.handleChange('description')}
                             margin="normal"
                             className={classes.FormControl}
@@ -98,12 +104,12 @@ export default withStyles(styles) (class extends Component {
                     </form>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={this.handleTogggle} variant="raised" color="primary">
+                    <Button onClick={this.handleSubmit} variant="raised" color="primary">
                         Create
                     </Button>
-                    <Button onClick={this.handleTogggle} variant="raised" color="primary">
+                    {/* <Button onClick={this.handleTogggle} variant="raised" color="primary">
                         Cancel
-                    </Button>
+                    </Button> */}
                 </DialogActions>
             </Dialog>
         </Fragment>
