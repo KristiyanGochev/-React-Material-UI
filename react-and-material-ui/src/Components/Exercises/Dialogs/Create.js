@@ -38,7 +38,18 @@ export default withStyles(styles) (class extends Component {
     handleSubmit = () =>{
         //TODO validate
         const {exercise} = this.state
-        this.props.onCreate(exercise);
+        this.props.onCreate({
+            ...exercise,
+            id: exercise.title.toLocaleLowerCase()
+        })
+        this.setState({
+            open:false,
+            exercise:{
+                title:'',
+                description:'',
+                muscles:''
+            }
+        })
     }
     handleChange = name => ({target:{value}})=>{
         debugger;

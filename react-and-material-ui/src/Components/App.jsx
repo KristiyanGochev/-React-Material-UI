@@ -6,7 +6,7 @@ import {muscles, exercises} from '../store'
 export default class extends Component {
     state={
         exercises,
-        exercise:{}
+        exercise: { }
     }
 getExercisesByMusles(){
     return Object.entries(this.state.exercises.reduce((exercises,exercise)=> {
@@ -27,12 +27,13 @@ this.setState({
 
 }
 handleExerciseSelect = id =>{
-    this.setState((exercise)=>({
+    this.setState(({exercises})=>({
         exercise: exercises.find(ex =>ex.id === id)
     }))
 }
-handleExerciseCreate = exercises =>{
-    this.setState(({exercise}) =>({
+handleExerciseCreate = exercise =>{
+    debugger;
+    this.setState(({exercises}) =>({
         exercises:[
             ...exercises, exercise
             ]

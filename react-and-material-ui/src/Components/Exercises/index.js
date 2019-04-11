@@ -35,7 +35,7 @@ export default ({
 <Grid container>
     <Grid item sm>
         <Paper style={style.PaperLeft} >
-          {exercises.map(([ group ,exercises])=>
+          {exercises.map(([ group ,exercise])=>
             !category || category === group 
                 ?<Fragment key = {group}>
                     <Typography 
@@ -45,7 +45,7 @@ export default ({
                         {group}
                     </Typography>
                     <List component="ul">
-                    {exercises.map(({id,title}) =>
+                    {exercise.map(({id,title}) =>
                         <ListItem
                         button
                         key ={id}
