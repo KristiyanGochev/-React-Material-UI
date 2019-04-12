@@ -1,11 +1,17 @@
 import React, {Fragment} from 'react'
+import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
+import Form from './Form'
 import {
     Grid,
     Paper,
     Typography,
     List,
     ListItem,
-    ListItemText} from '@material-ui/core'
+    ListItemText,
+    ListItemSecondaryAction,
+    IconButton} from '@material-ui/core'
+
 
 const style = {
     PaperLeft:{
@@ -25,13 +31,20 @@ const style = {
 
 export default ({
     exercises,
+    muscles,
+    exercise,
     category,
     onSelect,
+    onDelete,
+    onSelectEdit,
+    onEdit,
+    editMode,
     exercise:{
         id,
         title = 'Welcome',
         description = 'Please select an exercises from the list on the left!',
-        }}) =>
+        }
+    }) =>
 <Grid container>
     <Grid item sm>
         <Paper style={style.PaperLeft} >
@@ -50,8 +63,15 @@ export default ({
                         button
                         key ={id}
                         onClick={()=>onSelect(id)}>
-                            <ListItemText primary={title}                            
-                            />
+                            <ListItemText primary={title}/>
+                            <ListItemSecondaryAction>
+                            <   IconButton onClick={() => onSelectEdit(id)}>
+                                    <EditIcon/>
+                                </IconButton>
+                                <IconButton onClick={() => onDelete(id)}>
+                                    <DeleteIcon/>
+                                </IconButton>
+                            </ListItemSecondaryAction>
                         </ListItem>
                         )}
                     </List>
@@ -63,6 +83,12 @@ export default ({
     
     <Grid item sm>
         <Paper style={style.PaperRight}>
+        {editMode
+        ?<Form 
+        exercise = {exercise}
+        muscles= {muscles}
+        onSubmit={onEdit}/>
+        :<Fragment>
             <Typography variant="display1">
              {title}
             </Typography>
@@ -70,6 +96,9 @@ export default ({
             style={{marginTop:20}}>
                {description}
             </Typography>
+        </Fragment>
+        }
+
         </Paper>
     </Grid>
 
