@@ -13,11 +13,10 @@ const styles = them =>({
         width: 300
     }
 })
+
 export default withStyles(styles)( class extends Component{
     state = this.getInitState()
-
     getInitState(){
-        debugger;
         const {exercise} = this.props
         return exercise 
         ? exercise 
@@ -39,7 +38,6 @@ export default withStyles(styles)( class extends Component{
         })
     }
     handleSubmit = () =>{
-        debugger;
         //TODO validate
         this.props.onSubmit({
             id: this.state.title.toLocaleLowerCase(),
@@ -63,15 +61,17 @@ export default withStyles(styles)( class extends Component{
             <br/>
             <FormControl  className={classes.FormControl}>
                 <InputLabel htmlFor="muscles">
-                Muscles
+                    Muscles
                 </InputLabel>
                     <Select
                         value={muscles}
                         onChange={this.handleChange('muscles')}
                     >
-                    {categories.map(category =>
-                    <MenuItem value={category} key={category}>{category}</MenuItem>
-                        )}
+                        {categories.map(category =>
+                        <MenuItem value={category} key={category}>
+                            {category}
+                        </MenuItem>
+                            )}
                 </Select>
             </FormControl>
             <br/>
