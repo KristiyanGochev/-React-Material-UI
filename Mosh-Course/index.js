@@ -1,8 +1,25 @@
+const config = require('config');
 const Joi = require('joi');
+//const morgan = require('morgan');
 const express = require('express');
+const logger =  require('./logger')
+const autentication =  require('./autentication')
 const app = express();
-app.use(express.json());
 
+
+// MiddleWare start
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
+app.use(express.static('public'));
+//app.use(morgan('tiny'));
+
+app.use(logger);
+app.use(autentication);
+// MiddleWare end
+console.log(`Node Env : ${process.env.NODE_ENV}`)
+console.log(`${app.get('env')}`)
+
+console.log("mailPassword"+ config.get("mail.password"))
 const courses = [
     {
         id: 1,
